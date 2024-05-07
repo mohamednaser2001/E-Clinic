@@ -7,6 +7,8 @@ import 'package:e_clinic/src/validation/data/models/generate_otp_response_model.
 import 'package:e_clinic/src/authentication/data/models/signup_request_model.dart';
 import 'package:retrofit/http.dart';
 import '../../src/authentication/data/models/signup_response_model.dart';
+import '../../src/edit_profile_model.dart';
+import '../../src/edit_profile_repo.dart';
 part 'api_service.g.dart';
 
 
@@ -32,4 +34,15 @@ abstract class ApiService{
 
   @POST(ApiConstants.verifyOTP)
   Future<GenerateOTPResponseModel> verifyOTP(@Header('Authorization') String token, @Body() Map<String, dynamic> body);
+
+  // @POST(ApiConstants.uploadProfileImage)
+  // Future<GenerateOTPResponseModel> uploadProfileImage(@Header('Authorization') String token, @Body() Map<String, dynamic> body);
+
+
+  @POST(ApiConstants.uploadProfileImage)
+  @MultiPart()
+  Future<EditProfileModel> uploadProfileImage(
+      @Header('Authorization') String token,
+      @Body() FormData formData,
+      );
 }

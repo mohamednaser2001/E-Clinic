@@ -1,11 +1,12 @@
 
 
 class ApiConstants{
-  static const String baseUrl= 'https://create.sobhdesign.com/api/v1/';
+  static const String baseUrl= 'https://clinic.createcompany.online/api/v1/';
   static const String signup= 'register';
   static const String login= 'login';
   static const String generateOTP= 'generate-email-otp';
   static const String verifyOTP= 'validate-email-otp';
+  static const String uploadProfileImage= 'profile/upload-image';
 }
 
 class ApiErrors {

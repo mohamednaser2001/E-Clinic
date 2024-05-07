@@ -4,6 +4,7 @@ import 'package:e_clinic/src/login/logic/login_cubit.dart';
 import 'package:e_clinic/src/validation/logic/otp_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../src/edit_profile_screen.dart';
 import '../../src/login/ui/screens/login_screen.dart';
 import '../../src/validation/ui/screens/otp_screen.dart';
 import '../../src/authentication/ui/screens/signup_screen.dart';
@@ -16,7 +17,7 @@ class AppRoutes {
     switch (routeSettings.name) {
       case Routes.home:
         return MaterialPageRoute(builder: (context) =>
-            HomeScreen());
+            EditProfileScreen());
 
       case Routes.signupRoute:
         return MaterialPageRoute(builder: (context) =>
